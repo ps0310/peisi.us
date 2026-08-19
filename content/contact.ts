@@ -1,0 +1,1 @@
+export const contact = { links:[{label:"Resume",href:"# TODO_CONTENT"},{label:"LinkedIn",href:"# TODO_CONTENT"},{label:"GitHub",href:"# TODO_CONTENT"},{label:"Email",href:"mailto:TODO_CONTENT"}], contexts:[{title:"Career",copy:"Operations / Systems / AI opportunities."},{title:"Build",copy:"AI × Physical Operations."},{title:"Connect",copy:"Ideas, systems and collaboration."}] };

@@ -1,0 +1,1 @@
+export const interests = [{name:"Music",detail:"Songwriting · original music · future playable tracks"},{name:"Photography",detail:"A future-ready visual archive"},{name:"Travel",detail:"Places, people and operating cultures"},{name:"Learning",detail:"Ideas that changed how I think"}];
