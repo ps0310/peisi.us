@@ -11,3 +11,6 @@
 @keyframes portrait-pulse{50%{background:var(--orange);color:white;transform:rotate(2deg)}}
 @media(max-width:760px){.heroPortrait{left:13%;top:25%;width:86vw;height:56vh}.portraitHalo{width:76%;left:12%;top:18%}.portraitStatus{right:4%;top:29%}}
 @media(prefers-reduced-motion:reduce){.heroPortrait{filter:none}.heroPortrait[data-state="greeting"] .portraitStatus{animation:none}}
+.hero h1{z-index:3;pointer-events:none}
+.hero h1 span{position:relative;z-index:4}
+.heroPortrait{z-index:2}
