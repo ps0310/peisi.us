@@ -14,3 +14,7 @@
 .hero h1{z-index:3;pointer-events:none}
 .hero h1 span{position:relative;z-index:4}
 .heroPortrait{z-index:2}
+.hero h1{z-index:1}
+.hero h1 span{position:absolute;float:none;left:24vw;top:.14em;font-size:.72em;z-index:1}
+.heroPortrait{z-index:4}
+@media(max-width:760px){.hero h1 span{position:static;float:none;font-size:1em;margin-left:.04em}.heroPortrait{z-index:4}}
