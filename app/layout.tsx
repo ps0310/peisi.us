@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,15 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const h = await headers();
-  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "localhost:3000";
-  const protocol = h.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og.png`;
-  const title = "Si Pei — Interactive Operations World";
-  const description = "Operations, systems and AI. I build better operating systems.";
-  return { title, description, icons:{icon:"/favicon.svg",shortcut:"/favicon.svg"}, openGraph:{title,description,type:"website",images:[image]}, twitter:{card:"summary_large_image",title,description,images:[image]} };
-}
+const title = "Si Pei — Interactive Operations World";
+const description = "Operations, systems and AI. I build better operating systems.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://peisi.us"),
+  title,
+  description,
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  openGraph: { title, description, type: "website", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+};
 
 export default function RootLayout({
   children,
